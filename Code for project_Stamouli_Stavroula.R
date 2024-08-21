@@ -1092,10 +1092,9 @@ plot5 <- ggplot(data2, aes(x = Distances, y = MvsT)) +
   theme(
     plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
     axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12),
     axis.text.x = element_text(size = 10),
-    axis.title.y = element_blank(),
-    axis.text.y = element_blank(),
-    axis.ticks.y = element_blank(),
+    axis.text.y = element_text(size = 10),
     legend.position = "bottom",
     legend.title = element_text(size = 12),
     legend.text = element_text(size = 10)
@@ -1219,7 +1218,7 @@ plot12 <- ggplot(data2, aes(x = Distances, y = SporesvsPollen)) +
 
 # Arrange plots in a grid
 grid.arrange(plot1, plot2, plot3,plot12, plot7, ncol = 5)
-grid.arrange(plot4, plot5, plot6, plot8, plot9,  plot10, ncol=6)
+grid.arrange(plot5, plot6, plot8, plot9, ncol=4)
 
 #Save those plots in png images using RMarkdown and the following code
 #png("Ind1.png", width=1800, height=1200, res=200)
@@ -1227,8 +1226,9 @@ grid.arrange(plot4, plot5, plot6, plot8, plot9,  plot10, ncol=6)
 #dev.off()
 
 #png("Ind2.png", width=1800, height=1200, res=200)
-#grid.arrange(plot5, plot6, plot8, plot9, plot10, ncol=5) #plot together with Pollen Indet and Spores Indet to get the same size and the crop
+#grid.arrange(plot5, plot6, plot8, plot9, ncol=4)
 #dev.off()
+
 
 
 
